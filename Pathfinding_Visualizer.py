@@ -104,25 +104,8 @@ class Node:
 
 		
 
-		
-
-		
-
-		
-		
-
 	def __lt__(self, other):
 		return False
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -223,30 +206,10 @@ def algorithm2(draw, grid, start, end):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 def h(p1,p2):
 	x1, y1 = p1 
 	x2, y2 = p2
 	return math.sqrt((float(x1-x2))**2 + (float(y1-y2))**2)
-
-
-
-
-
-
-
 
 
 
@@ -266,18 +229,7 @@ def reconstructPath(cameFrom, current, draw):
 		if current.color != turquoise and current.color != red:
 			current.makePath()
 		draw()
-
-
-
-
-
-
-
-
-
-
-
-
+		
 
 def makeGrid(rows, width):
 	grid = []
@@ -291,27 +243,11 @@ def makeGrid(rows, width):
 	return grid 
 
 
-
-
-
-
-
-
-
-
 def drawGrid(win, rows, width):
 	gap = width//rows
 	for i in range(rows):
 		pygame.draw.line(win, grey, (0, i*gap), (width,i*gap))
 		pygame.draw.line(win, grey, (i*gap, 0), (i*gap,width))
-
-
-
-
-
-
-
-
 
 
 
@@ -327,14 +263,6 @@ def draw(win, grid, rows, width):
 
 
 
-
-
-
-
-
-
-
-
 def getClicked(pos, rows, width):
 	gap = width//rows
 	y, x = pos
@@ -343,15 +271,6 @@ def getClicked(pos, rows, width):
 	col = x//gap
 
 	return row, col
-
-
-
-
-
-
-
-
-
 
 
 def main(win, width):
@@ -424,12 +343,6 @@ def main(win, width):
 					start = None
 					end = None
 					grid = makeGrid(rows,width)
-
-
-
-
-
-
 
 
 
